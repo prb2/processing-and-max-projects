@@ -1,6 +1,6 @@
 # cyclorama
 
-This is a simple sketch that oscillates RGB values based on the position of the
+This is a simple sketch that oscillates 'rgb' values based on the position of the
 mouse on the canvas.
 
 The `y` coordinate determines which value is currently changing. If the mouse
