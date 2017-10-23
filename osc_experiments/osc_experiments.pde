@@ -4,9 +4,7 @@ import oscP5.*;
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
-void setup() {
-  initOsc();
-}
+int val = 1;
 
 void initOsc() {
   oscP5 = new OscP5(this, 8080);
@@ -16,4 +14,19 @@ void initOsc() {
 
 public void foo(int value) {
   println("int received: " + value);
+  val = value;
+}
+
+void setup() {
+  initOsc();
+  size(500, 500, P3D);
+}
+
+void draw() {
+  clear();
+  background(255,255,255);
+  translate(250, 250, 0); 
+  rotateY(val);
+  noFill();
+  box(100);
 }
