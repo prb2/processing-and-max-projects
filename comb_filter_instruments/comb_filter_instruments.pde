@@ -18,8 +18,10 @@ public void foo(int value) {
 }
 
 void setup() {
+  frameRate(30);
+  fullScreen();
   initOsc();
-  size(500, 500, P3D);
+  // size(1000, 1000, P3D);
 }
 
 void draw() {
@@ -27,16 +29,16 @@ void draw() {
 
   switch(val) {
     case 0:
-      rect(0, 0, 250, 250);
+      rect(0, 0, width/2, height/2);
       break;
     case 1:
-      rect(250, 0, 250, 250);
+      rect(width/2, 0, width/2, height/2);
       break;
     case 2:
-      rect(0, 250, 250, 250);
+      rect(0, height/2, width/2, height/2);
       break;
     case 3:
-      rect(250, 250, 250, 250);
+      rect(width/2, height/2, width/2, height/2);
       break;
     default:
       clear();

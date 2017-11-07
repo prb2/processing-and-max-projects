@@ -1,0 +1,53 @@
+{
+	"pattrstorage" : 	{
+		"name" : "u503002088",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"slider" : [ 75 ],
+					"slider[1]" : [ 50 ],
+					"slider[2]" : [ 24 ],
+					"slider[3]" : [ 16 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"slider" : [ 2 ],
+					"slider[1]" : [ 16 ],
+					"slider[2]" : [ 10 ],
+					"slider[3]" : [ 15 ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"data" : 				{
+					"slider" : [ 7 ],
+					"slider[1]" : [ 13 ],
+					"slider[2]" : [ 10 ],
+					"slider[3]" : [ 8 ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"data" : 				{
+					"slider" : [ 127 ],
+					"slider[1]" : [ 127 ],
+					"slider[2]" : [ 127 ],
+					"slider[3]" : [ 127 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
