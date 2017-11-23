@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 686.0, 79.0, 720.0, 830.0 ],
+		"rect" : [ 34.0, 78.0, 1023.0, 530.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,11 +38,137 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-46",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 788.0, 395.0, 201.0, 33.0 ],
+					"style" : "",
+					"text" : "select the instance of the saw_note we want to play"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-44",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 736.5, 459.0, 272.0, 33.0 ],
+					"style" : "",
+					"text" : "creates 16 instances of the saw note, each instance plays a different midi note, from 48 to 63"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 736.5, 327.0, 199.0, 20.0 ],
+					"style" : "",
+					"text" : "48 + current row = midi note to play"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 736.5, 349.0, 215.0, 20.0 ],
+					"style" : "",
+					"text" : "convert from 0 based index to 1 based"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 655.0, 208.0, 340.0, 33.0 ],
+					"style" : "",
+					"text" : "passes the input int through the left and a bang for each input through the right"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-33",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 676.0, 165.0, 323.0, 33.0 ],
+					"style" : "",
+					"text" : "iterates through the list and outputs each element one at a time"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 494.0, 756.0, 93.0, 22.0 ],
+					"style" : "",
+					"text" : "print @popup 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 214.0, 718.0, 279.0, 33.0 ],
+					"style" : "",
+					"text" : "outputs a list representing each column\n0 = off, 1 = on for that dot in the selected column"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 230.5, 256.0, 166.0, 20.0 ],
+					"style" : "",
+					"text" : "Iterates through each column"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 439.0, 256.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-29",
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 683.0, 902.0, 45.0, 45.0 ],
+					"patching_rect" : [ 617.0, 660.0, 45.0, 45.0 ],
 					"style" : ""
 				}
 
@@ -54,7 +180,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 635.0, 740.0, 111.0, 22.0 ],
+					"patching_rect" : [ 617.0, 459.0, 111.0, 22.0 ],
 					"style" : "",
 					"text" : "poly~ saw_note 16"
 				}
@@ -68,7 +194,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 629.0, 787.0, 22.0, 140.0 ],
+					"patching_rect" : [ 617.0, 500.0, 22.0, 140.0 ],
 					"style" : ""
 				}
 
@@ -80,7 +206,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 612.0, 671.0, 29.5, 22.0 ],
+					"patching_rect" : [ 617.0, 395.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "i"
 				}
@@ -94,7 +220,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 149.0, 67.0, 24.0, 24.0 ],
+					"patching_rect" : [ 114.0, 61.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -106,7 +232,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 576.0, 570.0, 52.0, 22.0 ],
+					"patching_rect" : [ 617.0, 256.0, 52.0, 22.0 ],
 					"style" : "",
 					"text" : "select 1"
 				}
@@ -119,7 +245,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 737.0, 671.0, 89.0, 22.0 ],
+					"patching_rect" : [ 697.0, 395.0, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend target"
 				}
@@ -132,7 +258,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 673.0, 636.0, 34.0, 22.0 ],
+					"patching_rect" : [ 645.0, 349.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "+ 48"
 				}
@@ -145,7 +271,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 737.0, 636.0, 29.5, 22.0 ],
+					"patching_rect" : [ 697.0, 349.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "+ 1"
 				}
@@ -158,7 +284,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 673.0, 581.0, 29.5, 22.0 ],
+					"patching_rect" : [ 686.5, 293.5, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "t i i"
 				}
@@ -166,25 +292,14 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 447.0, 165.0, 150.0, 20.0 ],
-					"style" : "",
-					"text" : "number of columns"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 752.0, 547.0, 150.0, 20.0 ],
+					"patching_rect" : [ 755.5, 256.0, 255.0, 33.0 ],
 					"style" : "",
-					"text" : "number of rows"
+					"text" : "counts the current row in the selected column we're currently processing"
 				}
 
 			}
@@ -195,7 +310,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 672.0, 539.0, 67.0, 22.0 ],
+					"patching_rect" : [ 686.5, 256.0, 67.0, 22.0 ],
 					"style" : "",
 					"text" : "counter 15"
 				}
@@ -208,7 +323,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
-					"patching_rect" : [ 587.0, 491.0, 30.0, 22.0 ],
+					"patching_rect" : [ 617.0, 208.0, 30.0, 22.0 ],
 					"style" : "",
 					"text" : "t i b"
 				}
@@ -221,7 +336,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 587.0, 448.0, 49.0, 22.0 ],
+					"patching_rect" : [ 617.0, 165.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "zl iter 1"
 				}
@@ -233,7 +348,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 220.0, 165.0, 213.0, 20.0 ],
+					"patching_rect" : [ 185.0, 208.0, 213.0, 20.0 ],
 					"style" : "",
 					"text" : "increments from 0 to 15 on each bang"
 				}
@@ -246,7 +361,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 149.0, 216.0, 113.0, 22.0 ],
+					"patching_rect" : [ 114.0, 255.0, 113.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend getcolumn"
 				}
@@ -259,7 +374,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 149.0, 165.0, 67.0, 22.0 ],
+					"patching_rect" : [ 114.0, 208.0, 67.0, 22.0 ],
 					"style" : "",
 					"text" : "counter 15"
 				}
@@ -272,7 +387,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 149.0, 111.0, 65.0, 22.0 ],
+					"patching_rect" : [ 114.0, 165.0, 65.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 125"
 				}
@@ -287,7 +402,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "list", "list" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 114.0, 388.0, 399.0, 399.0 ],
+					"patching_rect" : [ 114.0, 313.0, 399.0, 399.0 ],
 					"rows" : 16,
 					"style" : ""
 				}
@@ -350,10 +465,19 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 503.5, 797.0, 550.0, 797.0, 550.0, 437.0, 596.5, 437.0 ],
+					"midpoints" : [ 503.5, 731.0, 565.0, 731.0, 565.0, 144.0, 626.5, 144.0 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -436,6 +560,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
